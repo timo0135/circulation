@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #f0f0f0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+#meteoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#meteoContainer div {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+#meteoContainer h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#meteoContainer p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+#map {
+    height: 600px;
+    width: 600px;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.used_api {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 90%;
+}
+
+.used_api h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.used_api ul {
+    list-style: none;
+    padding: 0;
+}
+
+.used_api li {
+    margin-bottom: 0.5rem;
+}
+
+.used_api a {
+    color: #0288d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.used_api a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    #map {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    #map {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 300px;
+        width: 300px;
+    }
+
+    #meteoContainer div {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    #map {
+        height: 200px;
+        width: 200px;
+    }
+
+    #meteoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #meteoContainer div {
+        width: 100%;
+        max-width: 300px;
+    }
+}
